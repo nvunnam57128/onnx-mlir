@@ -279,6 +279,7 @@ void registerOMPasses(int optLevel) {
   });
 
   mlir::registerPass(createQuantTypesPass);
+  mlir::registerPass(createONNXCSEPass);
 
 #ifdef ONNX_MLIR_ENABLE_STABLEHLO
   mlir::registerPass([]() -> std::unique_ptr<mlir::Pass> {
